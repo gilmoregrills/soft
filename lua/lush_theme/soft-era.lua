@@ -219,4 +219,18 @@ local theme = lush(function(injected_functions)
 		sym("@variable")({ fg = purpleDefault }),
 	}
 end)
-return theme
+local function get_ascii_art()
+    return [[
+     _____       __  ______ ______  
+    / ___/____  / /_/ ____// ____/  
+    \__ \/ __ \/ __/ /_   / /_      
+   ___/ / /_/ / /_/ __/  / __/      
+  /____/ .___/\__/_/    /_/         
+       /_/                          
+    ]]
+end
+
+return {
+    theme = theme,
+    get_ascii_art = get_ascii_art
+}
