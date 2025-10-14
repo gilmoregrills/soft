@@ -6,9 +6,9 @@
 
 ![soft era syntax theme screenshot](screenshot.png)
 
-Uses [lush.nvim](https://github.com/rktjmp/lush.nvim/) for theme creation with colours copied from [ soft-era-vim ](https://github.com/soft-aesthetic/soft-era-vim) and [ soft-era-vscode ](https://github.com/soft-aesthetic/soft-era-vs-code).
+Copies structure from [ymir.nvim](https://github.com/Ronxvier/ymir.nvim) for theme creation with colours copied from [ soft-era-vim ](https://github.com/soft-aesthetic/soft-era-vim) and [ soft-era-vscode ](https://github.com/soft-aesthetic/soft-era-vs-code).
 
-Tries to support plugins that I use, which is why there are sections for telescope, which-key, and mini.indentscope, but if it doesn't play nicely with any other plugins then please feel free to create an issue/PR.
+Tries to support plugins that I use, which is why there are groups sections for telescope, which-key, and mini.indentscope, but if it doesn't play nicely with any other plugins then please feel free to create an issue/PR.
 
 Also uses italics for some highlight groups, so there's that :)
 
@@ -25,9 +25,3 @@ Also uses italics for some highlight groups, so there's that :)
 	end,
 },
 ```
-
-## Edits
-
-Changes should be made to `lua/lush-theme/soft-era.lua`. If you have lush.nvim installed locally you can run `:Lushify` with the theme file open to see any changes in real time.
-
-To build, you'll need [ shipwright ](https://github.com/rktjmp/shipwright.nvim) installed, once installed you can run `:Shipwright` in the root of the repo to build the theme files in the `colors/` directory.
