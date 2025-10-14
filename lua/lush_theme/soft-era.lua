@@ -89,7 +89,7 @@ local theme = lush(function(injected_functions)
 		-- ported from soft-era-vim
 		-- BASE UI
 		Conceal({ fg = debug1, bg = debug2 }),
-		Cursor({ fg = background, bg = cursor, ctermbg = cursor }),
+		Cursor({ fg = background, bg = cursor, ctermbg = cursor, guifg = background, guibg = cursor }),
 		CursorIM({ fg = debug1, bg = debug2 }),
 		CursorColumn({ fg = background, bg = cursor, ctermbg = cursor }),
 		Directory({ fg = greenFaded }),
@@ -214,23 +214,18 @@ local theme = lush(function(injected_functions)
 		Ignore({ fg = textDark }),
 		Error({ fg = red }),
 		Todo({ fg = redFaded }),
+		RenderMarkdownH1({ fg = purpleDarkest, cterm = "underline", gui = "underline", bg = background }),
+		RenderMarkdownH2({ fg = purpleDarkest, cterm = "underline", gui = "underline", bg = background }),
+		RenderMarkdownH3({ fg = purpleDarkest, cterm = "underline", gui = "underline", bg = background }),
+		RenderMarkdownH4({ fg = purpleDarkest, cterm = "underline", gui = "underline", bg = background }),
+		RenderMarkdownH5({ fg = purpleDarkest, cterm = "underline", gui = "underline", bg = background }),
+		RenderMarkdownH6({ fg = purpleDarkest, cterm = "underline", gui = "underline", bg = background }),
 
 		-- treesitter highlight group definitions
 		sym("@variable")({ fg = purpleDefault }),
 	}
 end)
-local function get_ascii_art()
-    return [[
-     _____       __  ______ ______  
-    / ___/____  / /_/ ____// ____/  
-    \__ \/ __ \/ __/ /_   / /_      
-   ___/ / /_/ / /_/ __/  / __/      
-  /____/ .___/\__/_/    /_/         
-       /_/                          
-    ]]
-end
 
 return {
-    theme = theme,
-    get_ascii_art = get_ascii_art
+	theme = theme,
 }
