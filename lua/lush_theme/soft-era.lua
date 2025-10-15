@@ -42,7 +42,6 @@ local theme = lush(function(injected_functions)
 	-- local var = nvim.("@variable")
 	return {
 
-		-- ported from soft-era-vim
 		-- BASE UI
 		Conceal({ fg = debug1, bg = debug2 }),
 		Cursor({ fg = background, bg = cursor, ctermbg = cursor, guifg = background, guibg = cursor }),

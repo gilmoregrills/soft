@@ -1,4 +1,4 @@
-local colors = require("soft-era.palette")
+local colors = require("soft.palette")
 
 local normal = {
 	a = { fg = colors.black, bg = colors.yellow, gui = "bold" },

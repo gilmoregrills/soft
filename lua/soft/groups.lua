@@ -1,6 +1,6 @@
 local M = {}
 
-local colors = require("soft-era.palette")
+local colors = require("soft.palette")
 
 M.setup = function()
 	return {

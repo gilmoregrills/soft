@@ -29,9 +29,9 @@ local function apply_term_colors(colors)
 end
 
 local function apply(opts)
-	local colors = require("soft-era.palette")
+	local colors = require("soft.palette")
 	apply_term_colors(colors)
-	local groups = require("soft-era.groups").setup()
+	local groups = require("soft.groups").setup()
 
 	-- apply transparents
 	if opts.transparent then
@@ -57,7 +57,7 @@ end
 
 M.load = function()
 	if vim.fn.has("nvim-0.7") ~= 1 then
-		vim.notify("soft-era.nvim: you must use neovim 0.7 or higher")
+		vim.notify("soft.nvim: you must use neovim 0.7 or higher")
 		return
 	end
 
@@ -72,7 +72,7 @@ M.load = function()
 
 	vim.o.background = "dark"
 	vim.o.termguicolors = true
-	vim.g.colors_name = "soft-era"
+	vim.g.colors_name = "soft"
 
 	apply(M.opts)
 end
