@@ -1,6 +1,6 @@
 local M = {}
 
-local colors = require("ymir.palette")
+local colors = require("soft-era.palette")
 
 M.setup = function()
 	return {
