@@ -74,7 +74,7 @@ M.setup = function()
 		IncSearch = { fg = colors.text, bg = colors.selection },
 		LineNr = { fg = colors.comment },
 		MatchParen = { fg = colors.purpleDefault, underline = true },
-		NonText = { fg = colors.nontext },
+		NonText = { fg = colors.nontext, bg = colors.background },
 		Pmenu = { fg = colors.purpleDarkest, bg = colors.purpleLight },
 		PmenuSel = { fg = colors.purpleDarkest, blend = 0, bg = colors.purpleDefault },
 		PmenuSbar = { fg = colors.debug1, bg = colors.debug2 },
