@@ -4,8 +4,8 @@ local colors = require("soft.palette")
 
 M.setup = function()
 	return {
-		Normal = { fg = colors.fg, bg = colors.bg },
-		NormalFloat = { fg = colors.fg, bg = colors.bg },
+		Normal = { fg = colors.foreground, bg = colors.background },
+		NormalFloat = { fg = colors.foreground, bg = colors.background },
 		Comment = { fg = colors.comment, italic = true },
 		Constant = { fg = colors.number },
 		String = { fg = colors.number },
@@ -40,64 +40,92 @@ M.setup = function()
 		Todo = { fg = colors.magenta, bold = true, italic = true },
 		Underlined = { fg = colors.cyan, underline = true },
 
-		Cursor = { fg = colors.cursor },
-		CursorLineNr = { fg = colors.fg, bold = true },
+		Cursor = {
+			fg = colors.background,
+			bg = colors.cursor,
+			ctermbg = cursor,
+			guifg = colors.background,
+			guibg = colors.cursor,
+		},
+		CursorLineNr = { fg = colors.textEmphasis, bold = true },
 
-		SignColumn = { bg = colors.bg },
+		SignColumn = { bg = colors.background },
 
 		Conceal = { fg = colors.comment },
-		CursorColumn = { bg = colors.black },
-		CursorLine = { bg = colors.selection },
+		CursorColumn = { fg = colors.background, bg = colors.cursor, ctermbg = colors.cursor },
+		CursorLine = { bg = colors.backgroundDarker },
 		ColorColumn = { bg = colors.selection },
 
-		StatusLine = { fg = colors.statusline, bg = colors.black },
-		StatusLineNC = { fg = colors.comment },
-		StatusLineTerm = { fg = colors.white, bg = colors.black },
-		StatusLineTermNC = { fg = colors.comment },
+		StatusLine = { fg = colors.purpleDefault, bg = colors.purpleLight },
+		StatusLineNC = { fg = colors.textEmphasis, bg = colors.purpleDefault },
+		StatusLineTerm = { fg = colors.purpleDefault, bg = colors.purpleLight },
+		StatusLineTermNC = { fg = colors.textEmphasis, bg = colors.purpleDefault },
 
-		Directory = { fg = colors.cyan },
-		DiffAdd = { fg = colors.bg, bg = colors.number },
-		DiffChange = { fg = colors.orange },
+		Directory = { fg = colors.green },
+		DiffAdd = { fg = colors.greenFaded },
+		DiffChange = { fg = colors.yellow },
 		DiffDelete = { fg = colors.red },
-		DiffText = { fg = colors.comment },
+		DiffText = { fg = colors.comment, gui = "reverse" },
 
-		ErrorMsg = { fg = colors.bright_red },
-		VertSplit = { fg = colors.black },
-		WinSeparator = { fg = colors.black },
+		ErrorMsg = { fg = colors.red, gui = "reverse" },
+		VertSplit = { fg = colors.purpleDefault },
+		WinSeparator = { fg = colors.purpleDefault },
 		Folded = { fg = colors.comment },
 		FoldColumn = {},
-		Search = { fg = colors.black, bg = colors.number },
-		IncSearch = { fg = colors.number, bg = colors.comment },
+		Search = { fg = colors.text, bg = colors.selection },
+		IncSearch = { fg = colors.text, bg = colors.selection },
 		LineNr = { fg = colors.comment },
-		MatchParen = { fg = colors.fg, underline = true },
+		MatchParen = { fg = colors.purpleDefault, underline = true },
 		NonText = { fg = colors.nontext },
-		Pmenu = { fg = colors.white, bg = colors.menubg },
-		PmenuSel = { fg = colors.white, bg = colors.selection },
-		PmenuSbar = { bg = colors.bg },
-		PmenuThumb = { bg = colors.selection },
+		Pmenu = { fg = colors.purpleDarkest, bg = colors.purpleLight },
+		PmenuSel = { fg = colors.purpleDarkest, blend = 0, bg = colors.purpleDefault },
+		PmenuSbar = { fg = colors.debug1, bg = colors.debug2 },
+		PmenuThumb = { fg = colors.debug1, bg = colors.debug2 },
 
-		Question = { fg = colors.magenta },
-		QuickFixLine = { fg = colors.black, bg = colors.yellow },
-		SpecialKey = { fg = colors.nontext },
+		Question = { fg = colors.debug2 },
+		QuickFixLine = { fg = colors.text, bg = colors.yellow },
+		SpecialKey = { fg = colors.red, bg = colors.background },
 
-		SpellBad = { fg = colors.bright_red, underline = true },
+		SpellBad = { fg = colors.red, underline = true },
 		SpellCap = { fg = colors.yellow },
 		SpellLocal = { fg = colors.yellow },
 		SpellRare = { fg = colors.yellow },
 
-		TabLine = { fg = colors.comment },
-		TabLineSel = { fg = colors.white },
-		TabLineFill = { bg = colors.bg },
 		Terminal = { fg = colors.white, bg = colors.black },
 		Visual = { bg = colors.visual },
 		VisualNOS = { fg = colors.visual },
 		WarningMsg = { fg = colors.yellow },
 		WildMenu = { fg = colors.black, bg = colors.white },
 
+		-- tabline styles
+		TabLine = { fg = colors.purpleLight, bg = colors.background, italic = true },
+		TabLineSel = { fg = colors.purpleDarkest, bg = colors.background, bold = true },
+		TabLineFill = { fg = colors.purpleLight, bg = colors.background },
+
+		-- which-key
+		WhichKey = { fg = purpleDarkest },
+		WhichKeyBorder = { fg = purpleDarkest, bg = background },
+		WhichKeyNormal = { fg = colors.foreground, bg = colors.background },
+
+		-- telescope
+		TelescopeBorder = { fg = colors.purpleDefault, bg = colors.background },
+
+		-- mini.indentscope
+		MiniIndentscopeSymbol = { fg = colors.purpleDefault },
+
+		-- trouble
+		TroubleNormal = { fg = colors.foreground, bg = colors.background },
+		TroubleText = { fg = colors.foreground, bg = colors.background },
+		TroubleNormalNC = { fg = colors.foreground, bg = colors.background },
+
+		-- lazy
+		LazyBold = { fg = colors.foreground, bg = colors.background, bold = false },
+		LazyH2 = { fg = colors.foreground, bg = colors.background, bold = false },
+
 		-- TreeSitter
 		["@error"] = { fg = colors.diag_error },
-		["@punctuation.delimiter"] = { fg = colors.fg },
-		["@punctuation.bracket"] = { fg = colors.fg },
+		["@punctuation.delimiter"] = { fg = colors.foreground },
+		["@punctuation.bracket"] = { fg = colors.foreground },
 		["@punctuation.special"] = { fg = colors.cyan },
 
 		["@constant"] = { fg = colors.constant },
@@ -184,7 +212,7 @@ M.setup = function()
 		["@lsp.type.property"] = { fg = colors.bright_magenta },
 		["@lsp.type.struct"] = { fg = colors.cyan },
 		["@lsp.type.type"] = { fg = colors.yellow },
-		["@lsp.type.variable"] = { fg = colors.fg },
+		["@lsp.type.variable"] = { fg = colors.foreground },
 
 		-- HTML
 		htmlArg = { fg = colors.orange },
@@ -250,18 +278,18 @@ M.setup = function()
 		GitSignsCurrentLineBlame = { fg = colors.white },
 
 		-- NvimTree
-		NvimTreeNormal = { fg = colors.fg, bg = colors.menu },
-		NvimTreeVertSplit = { fg = colors.bg, bg = colors.bg },
-		NvimTreeRootFolder = { fg = colors.fg, bold = true },
+		NvimTreeNormal = { fg = colors.foreground, bg = colors.menu },
+		NvimTreeVertSplit = { fg = colors.background, bg = colors.background },
+		NvimTreeRootFolder = { fg = colors.foreground, bold = true },
 		NvimTreeGitDirty = { fg = colors.yellow },
 		NvimTreeGitNew = { fg = colors.number },
 		NvimTreeImageFile = { fg = colors.blue },
 		NvimTreeFolderIcon = { fg = colors.magenta },
 		NvimTreeIndentMarker = { fg = colors.nontext },
 		NvimTreeEmptyFolderName = { fg = colors.comment },
-		NvimTreeFolderName = { fg = colors.fg },
+		NvimTreeFolderName = { fg = colors.foreground },
 		NvimTreeSpecialFile = { fg = colors.blue, underline = true },
-		NvimTreeOpenedFolderName = { fg = colors.fg },
+		NvimTreeOpenedFolderName = { fg = colors.foreground },
 		NvimTreeCursorLine = { bg = colors.selection },
 		NvimTreeIn = { bg = colors.selection },
 
@@ -301,8 +329,8 @@ M.setup = function()
 		LspCodeLens = { fg = colors.cyan },
 
 		-- Cmp
-		CmpItemAbbr = { fg = colors.white, bg = colors.bg },
-		CmpItemKind = { fg = colors.white, bg = colors.bg },
+		CmpItemAbbr = { fg = colors.white, bg = colors.background },
+		CmpItemKind = { fg = colors.white, bg = colors.background },
 		CmpItemKindMethod = { link = "@method" },
 		CmpItemKindText = { link = "@text" },
 		CmpItemKindFunction = { link = "@function" },
@@ -327,7 +355,7 @@ M.setup = function()
 		CmpItemKindTypeParameter = { link = "@parameter" },
 
 		-- WinPicker
-		WinPicker = { fg = colors.bg, bg = colors.number },
+		WinPicker = { fg = colors.background, bg = colors.number },
 	}
 end
 

@@ -1,31 +1,34 @@
 local M = {}
 
 local TRANSPARENTS = {
-	"Normal",
-	"SignColumn",
-	"NvimTreeNormal",
-	"NvimTreeVertSplit",
+	-- "Normal",
+	-- "SignColumn",
+	-- "NvimTreeNormal",
+	-- "NvimTreeVertSplit",
 }
 
 local function apply_term_colors(colors)
+	-- standard
 	vim.g.terminal_color_0 = colors.black
 	vim.g.terminal_color_1 = colors.red
 	vim.g.terminal_color_2 = colors.green
 	vim.g.terminal_color_3 = colors.yellow
 	vim.g.terminal_color_4 = colors.purple
-	vim.g.terminal_color_5 = colors.pink
-	vim.g.terminal_color_6 = colors.cyan
+	vim.g.terminal_color_5 = colors.hotPink
+	vim.g.terminal_color_6 = colors.blue
 	vim.g.terminal_color_7 = colors.white
 	vim.g.terminal_color_8 = colors.selection
-	vim.g.terminal_color_9 = colors.bright_red
-	vim.g.terminal_color_10 = colors.bright_green
-	vim.g.terminal_color_11 = colors.bright_yellow
-	vim.g.terminal_color_12 = colors.bright_blue
-	vim.g.terminal_color_13 = colors.bright_magenta
-	vim.g.terminal_color_14 = colors.bright_cyan
-	vim.g.terminal_color_15 = colors.bright_white
-	vim.g.terminal_color_background = colors.bg
-	vim.g.terminal_color_foreground = colors.fg
+	-- these should be the brights, need to add new colors to palette for these
+	vim.g.terminal_color_9 = colors.redDarker
+	vim.g.terminal_color_10 = colors.greenDarker
+	vim.g.terminal_color_11 = colors.yellowDarker
+	vim.g.terminal_color_12 = colors.blue
+	vim.g.terminal_color_13 = colors.salmon
+	vim.g.terminal_color_14 = colors.blue
+	vim.g.terminal_color_15 = colors.white
+	-- bg and fg
+	vim.g.terminal_color_background = colors.background
+	vim.g.terminal_color_foreground = colors.text
 end
 
 local function apply(opts)
@@ -70,7 +73,7 @@ M.load = function()
 		vim.cmd("syntax reset")
 	end
 
-	vim.o.background = "dark"
+	-- vim.o.background = "dark"
 	vim.o.termguicolors = true
 	vim.g.colors_name = "soft"
 

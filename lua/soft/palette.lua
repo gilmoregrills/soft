@@ -5,7 +5,6 @@ return {
 	backgroundDarkest = "#f2edec",
 	cursor = "#f6e3e7",
 	blue = "#82b4e3",
-	cyan = blue,
 	green = "#25b7b8",
 	greenDarker = "#1f9697",
 	greenFaded = "#98c4ba",
@@ -36,13 +35,12 @@ return {
 	debug2 = "#00ff00",
 	debug3 = "#0000ff",
 
-	bg = background,
-	fg = text, -- OR purpleDefault like it was before?
+	foreground = text, -- OR purpleDefault like it was before?
 	cursorline = backgroundDarker,
 	selection = purpleLight,
 	linenr = textFaded,
 	comment = textFaded,
-	nontext = textFaded,
+	nontext = textEmphasis,
 
 	-- Syntax
 	keyword = purpleDarkest,
