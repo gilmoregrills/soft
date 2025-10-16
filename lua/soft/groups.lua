@@ -5,6 +5,7 @@ local colors = require("soft.palette")
 M.setup = function()
 	return {
 		Normal = { fg = colors.foreground, bg = colors.background },
+		NormalNC = { fg = colors.foreground, bg = colors.background },
 		NormalFloat = { fg = colors.foreground, bg = colors.background },
 		Comment = { fg = colors.comment, italic = true },
 		Constant = { fg = colors.number },
