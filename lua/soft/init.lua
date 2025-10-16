@@ -51,7 +51,7 @@ end
 
 M.opts = {
 	italic_comment = false,
-	transparent = false,
+	transparent = true,
 }
 
 M.setup = function(opts)
