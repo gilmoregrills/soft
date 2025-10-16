@@ -65,9 +65,9 @@ M.setup = function()
 		DiffAdd = { fg = colors.greenFaded },
 		DiffChange = { fg = colors.yellow },
 		DiffDelete = { fg = colors.red },
-		DiffText = { fg = colors.comment, gui = "reverse" },
+		DiffText = { fg = colors.comment },
 
-		ErrorMsg = { fg = colors.red, gui = "reverse" },
+		ErrorMsg = { fg = colors.red },
 		VertSplit = { fg = colors.purpleDefault },
 		WinSeparator = { fg = colors.purpleDefault },
 		Folded = { fg = colors.comment },
