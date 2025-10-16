@@ -1,10 +1,10 @@
 local M = {}
 
 local TRANSPARENTS = {
-	-- "Normal",
-	-- "SignColumn",
-	-- "NvimTreeNormal",
-	-- "NvimTreeVertSplit",
+	"Normal",
+	"SignColumn",
+	"NvimTreeNormal",
+	"NvimTreeVertSplit",
 }
 
 local function apply_term_colors(colors)
