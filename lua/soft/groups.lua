@@ -51,7 +51,7 @@ M.setup = function()
 
 		Conceal = { fg = colors.comment },
 		CursorColumn = { fg = colors.background, bg = colors.cursor, ctermbg = colors.cursor },
-		CursorLine = { bg = colors.backgroundDarker },
+		CursorLine = { bg = colors.background },
 		ColorColumn = { bg = colors.selection },
 
 		StatusLine = { fg = colors.purpleDefault, bg = colors.purpleLight },
