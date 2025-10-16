@@ -37,7 +37,7 @@ M.setup = function()
 		Special = { fg = colors.number, italic = true },
 		SpecialComment = { fg = colors.comment, italic = true },
 		Error = { fg = colors.bright_red },
-		Todo = { fg = colors.magenta, bold = true, italic = true },
+		Todo = { fg = colors.magenta, bold = false, italic = true },
 		Underlined = { fg = colors.cyan, underline = true },
 
 		Cursor = {
@@ -97,7 +97,7 @@ M.setup = function()
 
 		-- tabline styles
 		TabLine = { fg = colors.purpleLight, bg = colors.background, italic = true },
-		TabLineSel = { fg = colors.purpleDarkest, bg = colors.background, bold = true },
+		TabLineSel = { fg = colors.purpleDarkest, bg = colors.background, bold = false },
 		TabLineFill = { fg = colors.purpleLight, bg = colors.background },
 
 		-- which-key
@@ -142,8 +142,8 @@ M.setup = function()
 		["@attribute"] = { fg = colors.cyan },
 		["@namespace"] = { fg = colors.number },
 
-		["@function.builtin"] = { fg = colors.Function, bold = true },
-		["@function"] = { fg = colors.Function, bold = true },
+		["@function.builtin"] = { fg = colors.Function, bold = false },
+		["@function"] = { fg = colors.Function, bold = false },
 		["@function.macro"] = { fg = colors.Function },
 		["@parameter"] = { fg = colors.number },
 		["@parameter.reference"] = { fg = colors.number },
@@ -156,7 +156,7 @@ M.setup = function()
 		["@repeat"] = { fg = colors.blue },
 		["@label"] = { fg = colors.cyan },
 
-		["@keyword"] = { fg = colors.keyword, bold = true },
+		["@keyword"] = { fg = colors.keyword, bold = false },
 		["@keyword.function"] = { fg = colors.Function },
 		["@keyword.function.ruby"] = { fg = colors.Function },
 		["@keyword.operator"] = { fg = colors.blue },
@@ -174,7 +174,7 @@ M.setup = function()
 		["@text"] = { fg = colors.number },
 		["@text.strong"] = { fg = colors.number, bold = true }, -- bold
 		["@text.emphasis"] = { fg = colors.yellow, italic = true }, -- italic
-		["@text.underline"] = { fg = colors.number },
+		["@text.underline"] = { fg = colors.number, underline = true },
 		["@text.title"] = { fg = colors.blue, bold = true }, -- title
 		["@text.literal"] = { fg = colors.number }, -- inline code
 		["@text.uri"] = { fg = colors.yellow, italic = true }, -- urls
@@ -278,7 +278,7 @@ M.setup = function()
 		-- NvimTree
 		NvimTreeNormal = { fg = colors.foreground, bg = colors.menu },
 		NvimTreeVertSplit = { fg = colors.background, bg = colors.background },
-		NvimTreeRootFolder = { fg = colors.foreground, bold = true },
+		NvimTreeRootFolder = { fg = colors.foreground, bold = false },
 		NvimTreeGitDirty = { fg = colors.yellow },
 		NvimTreeGitNew = { fg = colors.number },
 		NvimTreeImageFile = { fg = colors.blue },
