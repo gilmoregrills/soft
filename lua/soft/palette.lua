@@ -48,7 +48,9 @@ return {
 	string = blue,
 	constant = purpleDefault,
 	type = purpleDarker,
-	number = blue,
+	number = function(self)
+		return self.blue
+	end,
 	boolean = hotPink,
 	operator = hotPink,
 	variable = purpleDefault,
