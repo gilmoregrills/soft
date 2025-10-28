@@ -21,11 +21,11 @@ return {
 	salmon = "#eeaabe",
 	text = "#c8b3b3",
 	textDark = "#414141",
-	black = textDark,
+	black = "#414141",
 	textEmphasis = "#948484",
 	textFaded = "#e2d1d1",
 	violet = "#cb8dd7",
-	magenta = violet,
+	magenta = "#cb8dd7",
 	yellow = "#ede7c5",
 	yellowDarker = "#cabf9a",
 	yellowDarkest = "#a69d7f",
@@ -35,17 +35,19 @@ return {
 	debug2 = "#00ff00",
 	debug3 = "#0000ff",
 
-	foreground = text, -- OR purpleDefault like it was before?
-	cursorline = backgroundDarker,
-	selection = purpleLight,
-	linenr = textFaded,
-	comment = textFaded,
-	nontext = textEmphasis,
+	foreground = "#c8b3b3", -- OR purpleDefault like it was before?
+	cursorline = "#fbf8f8",
+	selection = "#eceafa",
+	linenr = "#e2d1d1",
+	comment = "#e2d1d1",
+	nontext = "#948484",
 
 	-- Syntax
-	keyword = purpleDarkest,
-	Function = greenFaded,
-	string = blue,
+	keyword = "#a29acb",
+	Function = "#98c4ba",
+	string = function(self)
+		return self.blue
+	end,
 	constant = purpleDefault,
 	type = purpleDarker,
 	number = function(self)

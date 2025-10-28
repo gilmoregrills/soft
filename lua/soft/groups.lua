@@ -44,7 +44,7 @@ M.setup = function()
 		Cursor = {
 			fg = colors.background,
 			bg = colors.cursor,
-			ctermbg = cursor,
+			ctermbg = colors.cursor,
 		},
 		CursorLineNr = { fg = colors.textEmphasis, bold = true },
 
