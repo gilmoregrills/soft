@@ -90,11 +90,11 @@ M.setup = function()
 		SpellLocal = { fg = colors.yellow },
 		SpellRare = { fg = colors.yellow },
 
-		Terminal = { fg = colors.white, bg = colors.black },
-		Visual = { bg = colors.visual },
+		Terminal = { fg = colors.text, bg = colors.background },
+		Visual = { bg = colors.background },
 		VisualNOS = { fg = colors.visual },
 		WarningMsg = { fg = colors.yellow },
-		WildMenu = { fg = colors.black, bg = colors.white },
+		WildMenu = { fg = colors.black, bg = colors.background },
 
 		-- tabline styles
 		TabLine = { fg = colors.purpleLight, bg = colors.background, italic = true },
