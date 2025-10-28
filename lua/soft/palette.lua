@@ -21,11 +21,15 @@ return {
 	salmon = "#eeaabe",
 	text = "#c8b3b3",
 	textDark = "#414141",
-	black = "#414141",
+	black = function(self)
+		return self.textDark
+	end,
 	textEmphasis = "#948484",
 	textFaded = "#e2d1d1",
 	violet = "#cb8dd7",
-	magenta = "#cb8dd7",
+	magenta = function(self)
+		return self.violet
+	end,
 	yellow = "#ede7c5",
 	yellowDarker = "#cabf9a",
 	yellowDarkest = "#a69d7f",

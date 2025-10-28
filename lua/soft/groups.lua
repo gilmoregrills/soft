@@ -35,7 +35,7 @@ M.setup = function()
 		StorageClass = { fg = colors.blue },
 		Structure = { fg = colors.yellow },
 		TypeDef = { fg = colors.yellow },
-		Special = { fg = colors.blue, italic = True },
+		Special = { fg = colors.blue, italic = true },
 		SpecialComment = { fg = colors.comment, italic = true },
 		Error = { fg = colors.bright_red },
 		Todo = { fg = colors.magenta, bold = false, italic = true },
