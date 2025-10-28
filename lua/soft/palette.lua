@@ -48,17 +48,29 @@ return {
 	string = function(self)
 		return self.blue
 	end,
-	constant = purpleDefault,
-	type = purpleDarker,
+	constant = function(self)
+		return self.purpleDefault
+	end,
+	type = function(self)
+		return self.purpleDarker
+	end,
 	number = function(self)
 		return self.blue
 	end,
-	boolean = hotPink,
-	operator = hotPink,
-	variable = purpleDefault,
+	boolean = function(self)
+		return self.hotPink
+	end,
+	operator = function(self)
+		return self.hotPink
+	end,
+	variable = function(self)
+		return self.purpleDefault
+	end,
 
 	-- UI
-	cursor = cursor,
+	cursor = function(self)
+		return self.cursor
+	end,
 	visual = "#2e3c55",
 	search = "#f5c2e7",
 	statusline = "#1e293b",
