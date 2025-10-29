@@ -102,8 +102,8 @@ M.setup = function()
 		TabLineFill = { fg = colors.purpleLight, bg = colors.background },
 
 		-- which-key
-		WhichKey = { fg = purpleDarkest },
-		WhichKeyBorder = { fg = purpleDarkest, bg = background },
+		WhichKey = { fg = colors.purpleDarkest },
+		WhichKeyBorder = { fg = colors.purpleDarkest, bg = colors.background },
 		WhichKeyNormal = { fg = colors.foreground, bg = colors.background },
 
 		-- telescope

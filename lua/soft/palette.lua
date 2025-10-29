@@ -1,4 +1,4 @@
-return {
+local palette = {
 	-- base colors
 	background = "#fbf8f8",
 	backgroundDarker = "#f9f5f5",
@@ -21,15 +21,9 @@ return {
 	salmon = "#eeaabe",
 	text = "#c8b3b3",
 	textDark = "#414141",
-	black = function(self)
-		return self.textDark
-	end,
 	textEmphasis = "#948484",
 	textFaded = "#e2d1d1",
 	violet = "#cb8dd7",
-	magenta = function(self)
-		return self.violet
-	end,
 	yellow = "#ede7c5",
 	yellowDarker = "#cabf9a",
 	yellowDarkest = "#a69d7f",
@@ -39,42 +33,7 @@ return {
 	debug2 = "#00ff00",
 	debug3 = "#0000ff",
 
-	foreground = "#c8b3b3", -- OR purpleDefault like it was before?
-	cursorline = "#fbf8f8",
-	selection = "#eceafa",
-	linenr = "#e2d1d1",
-	comment = "#e2d1d1",
-	nontext = "#948484",
-
-	-- Syntax
-	keyword = "#a29acb",
-	Function = "#98c4ba",
-	string = function(self)
-		return self.blue
-	end,
-	constant = function(self)
-		return self.purpleDefault
-	end,
-	type = function(self)
-		return self.purpleDarker
-	end,
-	number = function(self)
-		return self.blue
-	end,
-	boolean = function(self)
-		return self.hotPink
-	end,
-	operator = function(self)
-		return self.hotPink
-	end,
-	variable = function(self)
-		return self.purpleDefault
-	end,
-
 	-- UI
-	cursor = function(self)
-		return self.cursor
-	end,
 	visual = "#2e3c55",
 	search = "#f5c2e7",
 	statusline = "#1e293b",
@@ -82,10 +41,35 @@ return {
 	menu_sel = "#3b4252",
 	fold = "#3e4a5a",
 	split = "#334155",
-
-	-- Diagnostics
-	diag_error = "#f38ba8",
-	diag_warn = "#fab387",
-	diag_info = "#89dceb",
-	diag_hint = "#b4befe",
 }
+
+-- Aliases
+palette.black = palette.textDark
+palette.magenta = palette.violet
+palette.menu = palette.menu_bg
+-- Syntax
+palette.string = palette.blue
+palette.constant = palette.purpleDefault
+palette.type = palette.purpleDarker
+palette.number = palette.blue
+palette.boolean = palette.hotPink
+palette.operator = palette.hotPink
+palette.variable = palette.purpleDefault
+palette.keyword = palette.purpleDarkest
+palette.Function = palette.greenFaded
+palette.comment = palette.textFaded
+
+-- UI
+palette.cursorline = palette.background
+palette.linenr = palette.textFaded
+palette.selection = palette.purpleLight
+palette.foreground = palette.text
+palette.nontext = palette.textEmphasis
+
+-- Diagnostics
+palette.diag_error = palette.red
+palette.diag_warn = palette.yellow
+palette.diag_info = palette.green
+palette.diag_hint = palette.blue
+
+return palette
