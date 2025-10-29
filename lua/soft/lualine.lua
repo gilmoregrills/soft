@@ -1,34 +1,34 @@
 local colors = require("soft.palette")
 
 local normal = {
-	a = { fg = colors.black, bg = colors.yellow, gui = "bold" },
-	b = { fg = colors.yellow, bg = colors.background },
-	c = { fg = colors.white, bg = colors.background },
+	a = { fg = colors.black, bg = colors.purpleDarkest, gui = "bold" },
+	b = { fg = colors.purpleDarkest, bg = colors.purpleDarker },
+	c = { fg = colors.purpleDefault, bg = colors.purpleLight },
 }
 
 local command = {
-	a = { fg = colors.black, bg = colors.blue, gui = "bold" },
-	b = { fg = colors.blue, bg = colors.background },
+	a = { fg = colors.black, bg = colors.purpleDarkest, gui = "bold" },
+	b = { fg = colors.purpleDarkest, bg = colors.purpleDarker },
 }
 
 local visual = {
-	a = { fg = colors.black, bg = colors.magenta, gui = "bold" },
-	b = { fg = colors.magenta, bg = colors.background },
+	a = { fg = colors.black, bg = colors.purpleDarkest, gui = "bold" },
+	b = { fg = colors.purpleDarkest, bg = colors.purpleDarker },
 }
 
 local inactive = {
-	a = { fg = colors.foreground, bg = colors.visual, gui = "bold" },
-	b = { fg = colors.textFaded, bg = colors.background },
+	a = { fg = colors.black, bg = colors.purpleDarkest, gui = "bold" },
+	b = { fg = colors.purpleDarkest, bg = colors.purpleDarker },
 }
 
 local replace = {
-	a = { fg = colors.black, bg = colors.red, gui = "bold" },
-	b = { fg = colors.red, bg = colors.background },
+	a = { fg = colors.black, bg = colors.purpleDarkest, gui = "bold" },
+	b = { fg = colors.purpleDarkest, bg = colors.purpleDarker },
 }
 
 local insert = {
-	a = { fg = colors.black, bg = colors.green, gui = "bold" },
-	b = { fg = colors.green, bg = colors.background },
+	a = { fg = colors.black, bg = colors.purpleDarkest, gui = "bold" },
+	b = { fg = colors.purpleDarkest, bg = colors.purpleDarker },
 }
 
 return {

@@ -43,10 +43,10 @@ palette.visual = palette.salmon
 palette.bright_red = palette.redDarker
 palette.bright_cyan = palette.blue
 palette.bright_yellow = palette.yellowDarker
-palette.bright_magenta = palette.violet
+palette.bright_magenta = palette.hotPink
 
 -- Syntax
-palette.string = palette.blue
+palette.String = palette.blue
 palette.constant = palette.purpleDefault
 palette.type = palette.purpleDarker
 palette.number = palette.blue
