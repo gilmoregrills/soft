@@ -44,14 +44,13 @@ M.setup = function()
 		Cursor = {
 			fg = colors.background,
 			bg = colors.cursor,
-			ctermbg = colors.cursor,
 		},
 		CursorLineNr = { fg = colors.textEmphasis, bold = true },
 
 		SignColumn = { bg = colors.background },
 
 		Conceal = { fg = colors.comment },
-		CursorColumn = { fg = colors.background, bg = colors.cursor, ctermbg = colors.cursor },
+		CursorColumn = { fg = colors.background, bg = colors.cursor },
 		CursorLine = { bg = colors.background },
 		ColorColumn = { bg = colors.purpleLight },
 
