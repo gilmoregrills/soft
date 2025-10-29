@@ -36,8 +36,14 @@ local palette = {
 -- Aliases
 palette.black = palette.textDark
 palette.magenta = palette.violet
+palette.cyan = palette.blue
+palette.menu_bg = palette.background
 palette.menu = palette.menu_bg
 palette.visual = palette.text
+palette.bright_red = palette.redDarker
+palette.bright_cyan = palette.blue
+palette.bright_yellow = palette.yellowDarker
+palette.bright_magenta = palette.violet
 -- Syntax
 palette.string = palette.blue
 palette.constant = palette.purpleDefault
