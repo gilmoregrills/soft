@@ -3,7 +3,6 @@ local palette = {
 	background = "#fbf8f8",
 	backgroundDarker = "#f9f5f5",
 	backgroundDarkest = "#f2edec",
-	cursor = "#f6e3e7",
 	blue = "#82b4e3",
 	green = "#25b7b8",
 	greenDarker = "#1f9697",
@@ -32,21 +31,13 @@ local palette = {
 	debug1 = "#ff0000",
 	debug2 = "#00ff00",
 	debug3 = "#0000ff",
-
-	-- UI
-	visual = "#2e3c55",
-	search = "#f5c2e7",
-	statusline = "#1e293b",
-	menu_bg = "#1a2535",
-	menu_sel = "#3b4252",
-	fold = "#3e4a5a",
-	split = "#334155",
 }
 
 -- Aliases
 palette.black = palette.textDark
 palette.magenta = palette.violet
 palette.menu = palette.menu_bg
+palette.visual = palette.text
 -- Syntax
 palette.string = palette.blue
 palette.constant = palette.purpleDefault
@@ -60,6 +51,7 @@ palette.Function = palette.greenFaded
 palette.comment = palette.textFaded
 
 -- UI
+palette.cursor = palette.salmon
 palette.cursorline = palette.background
 palette.linenr = palette.textFaded
 palette.selection = palette.purpleLight
