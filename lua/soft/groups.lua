@@ -70,10 +70,10 @@ M.setup = function()
 		WinSeparator = { fg = colors.purpleDefault },
 		Folded = { fg = colors.comment },
 		FoldColumn = {},
-		Search = { fg = colors.text, bg = colors.purpleLight },
-		IncSearch = { fg = colors.text, bg = colors.salmon },
+		Search = { fg = colors.purpleDarkest, bg = colors.purpleLight },
+		IncSearch = { fg = colors.redDarker, bg = colors.salmon },
 		LineNr = { fg = colors.comment },
-		MatchParen = { fg = colors.purpleDefault, underline = true },
+		MatchParen = { underline = true },
 		NonText = { fg = colors.nontext, bg = colors.background },
 		Pmenu = { fg = colors.purpleDarkest, bg = colors.purpleLight },
 		PmenuSel = { fg = colors.purpleDarkest, blend = 0, bg = colors.purpleDefault },
@@ -81,7 +81,7 @@ M.setup = function()
 		PmenuThumb = { fg = colors.debug1, bg = colors.debug2 },
 
 		Question = { fg = colors.debug2 },
-		QuickFixLine = { fg = colors.text, bg = colors.yellow },
+		QuickFixLine = { fg = colors.foreground, bg = colors.yellow },
 		SpecialKey = { fg = colors.red, bg = colors.background },
 
 		SpellBad = { fg = colors.red, underline = true },
@@ -89,11 +89,11 @@ M.setup = function()
 		SpellLocal = { fg = colors.yellow },
 		SpellRare = { fg = colors.yellow },
 
-		Terminal = { fg = colors.text, bg = colors.background },
+		Terminal = { fg = colors.foreground, bg = colors.background },
 		Visual = { bg = colors.background },
-		VisualNOS = { fg = colors.visual },
+		VisualNOS = { fg = colors.salmon },
 		WarningMsg = { fg = colors.yellow },
-		WildMenu = { fg = colors.black, bg = colors.background },
+		WildMenu = { fg = colors.foreground, bg = colors.background },
 
 		-- tabline styles
 		TabLine = { fg = colors.purpleLight, bg = colors.background, italic = true },
@@ -292,10 +292,10 @@ M.setup = function()
 		NvimTreeIn = { bg = colors.purpleLight },
 
 		-- LSP
-		DiagnosticError = { fg = colors.text, bg = colors.red },
-		DiagnosticWarn = { fg = colors.text, bg = colors.yellow },
-		DiagnosticInfo = { fg = colors.text, bg = colors.blue },
-		DiagnosticHint = { fg = colors.text, bg = colors.blue },
+		DiagnosticError = { fg = colors.textDark, bg = colors.red },
+		DiagnosticWarn = { fg = colors.textDark, bg = colors.yellow },
+		DiagnosticInfo = { fg = colors.textDark, bg = colors.blue },
+		DiagnosticHint = { fg = colors.textDark, bg = colors.blue },
 		DiagnosticUnderlineError = { undercurl = true, sp = colors.red },
 		DiagnosticUnderlineWarn = { undercurl = true, sp = colors.yellow },
 		DiagnosticUnderlineInfo = { undercurl = true, sp = colors.blue },

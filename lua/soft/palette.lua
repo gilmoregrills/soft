@@ -39,11 +39,12 @@ palette.magenta = palette.violet
 palette.cyan = palette.blue
 palette.menu_bg = palette.background
 palette.menu = palette.menu_bg
-palette.visual = palette.text
+palette.visual = palette.salmon
 palette.bright_red = palette.redDarker
 palette.bright_cyan = palette.blue
 palette.bright_yellow = palette.yellowDarker
 palette.bright_magenta = palette.violet
+
 -- Syntax
 palette.string = palette.blue
 palette.constant = palette.purpleDefault
@@ -61,7 +62,7 @@ palette.cursor = palette.salmon
 palette.cursorline = palette.background
 palette.linenr = palette.textFaded
 palette.selection = palette.purpleLight
-palette.foreground = palette.text
+palette.foreground = palette.purpleDefault
 palette.nontext = palette.textEmphasis
 
 -- Diagnostics
