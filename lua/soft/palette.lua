@@ -1,5 +1,4 @@
 local palette = {
-	-- base colors
 	background = "#FBF8F8",
 	backgroundDarker = "#F9F5F5",
 	backgroundDarkest = "#F2EDEC",
@@ -32,43 +31,5 @@ local palette = {
 	debug2 = "#00FF00",
 	debug3 = "#0000FF",
 }
-
--- Aliases
-palette.black = palette.textDark
-palette.magenta = palette.violet
-palette.cyan = palette.blue
-palette.menu_bg = palette.background
-palette.menu = palette.menu_bg
-palette.visual = palette.salmon
-palette.bright_red = palette.redDarker
-palette.bright_cyan = palette.blue
-palette.bright_yellow = palette.yellowDarker
-palette.bright_magenta = palette.hotPink
-
--- Syntax
-palette.String = palette.blue
-palette.constant = palette.purpleDefault
-palette.type = palette.purpleDarker
-palette.number = palette.blue
-palette.boolean = palette.hotPink
-palette.operator = palette.hotPink
-palette.variable = palette.purpleDefault
-palette.keyword = palette.purpleDarkest
-palette.Function = palette.greenFaded
-palette.comment = palette.textFaded
-
--- UI
-palette.cursor = palette.salmon
-palette.cursorline = palette.background
-palette.linenr = palette.textFaded
-palette.selection = palette.purpleLight
-palette.foreground = palette.purpleDefault
-palette.nontext = palette.textEmphasis
-
--- Diagnostics
-palette.diag_error = palette.red
-palette.diag_warn = palette.yellow
-palette.diag_info = palette.green
-palette.diag_hint = palette.blue
 
 return palette

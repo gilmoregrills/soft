@@ -1,15 +1,15 @@
 local M = {}
 
-local TRANSPARENTS = {
-	"Normal",
-	"SignColumn",
-	"NvimTreeNormal",
-	"NvimTreeVertSplit",
-}
+-- local TRANSPARENTS = {
+-- 	"Normal",
+-- 	"SignColumn",
+-- 	"NvimTreeNormal",
+-- 	"NvimTreeVertSplit",
+-- }
 
 local function apply_term_colors(colors)
 	-- standard
-	vim.g.terminal_color_0 = colors.black
+	vim.g.terminal_color_0 = colors.textDark
 	vim.g.terminal_color_1 = colors.red
 	vim.g.terminal_color_2 = colors.green
 	vim.g.terminal_color_3 = colors.yellow
@@ -37,11 +37,11 @@ local function apply(opts)
 	local groups = require("soft.groups").setup()
 
 	-- apply transparents
-	if opts.transparent then
-		for _, group in ipairs(TRANSPARENTS) do
-			groups[group].bg = nil
-		end
-	end
+	-- if opts.transparent then
+	-- 	for _, group in ipairs(TRANSPARENTS) do
+	-- 		groups[group].bg = nil
+	-- 	end
+	-- end
 
 	-- set defined highlights
 	for group, setting in pairs(groups) do
@@ -51,7 +51,7 @@ end
 
 M.opts = {
 	italic_comment = false,
-	transparent = true,
+	-- transparent = true,
 }
 
 M.setup = function(opts)
