@@ -16,7 +16,7 @@ M.setup = function()
 		Float = { fg = colors.number },
 		FloatBorder = { fg = colors.foreground, bg = colors.background },
 		Operator = { fg = colors.operator },
-		Keyword = { fg = colors.keyword, italic = true, cterm = "italic" },
+		Keyword = { fg = colors.keyword, italic = true, cterm = { italic = true }, force = true },
 		Keywords = { link = "Keyword" },
 		Variable = { fg = colors.purpleDefault },
 		Identifier = { fg = colors.blue },
