@@ -20,7 +20,7 @@ M.setup = function()
 		Keywords = { link = "Keyword" },
 		Variable = { fg = colors.purpleDefault },
 		Identifier = { fg = colors.blue },
-		Function = { fg = colors.greenFaded },
+		Function = { fg = colors.green },
 		Statement = { link = "Keyword" },
 		Conditional = { fg = colors.blue },
 		Repeat = { fg = colors.blue },
@@ -32,7 +32,8 @@ M.setup = function()
 		Title = { fg = colors.blue },
 		Macro = { fg = colors.hotPink },
 		PreCondit = { fg = colors.blue },
-		Type = { fg = colors.redDarker },
+		Type = { fg = colors.greenFaded },
+		Class = { fg = colors.green },
 		StorageClass = { fg = colors.blue },
 		Structure = { fg = colors.yellow },
 		TypeDef = { fg = colors.yellow },
@@ -186,7 +187,7 @@ M.setup = function()
 		["@tag.delimiter"] = { fg = colors.blue },
 
 		-- Semantic
-		["@class"] = { fg = colors.blue },
+		["@class"] = { link = "Class" },
 		["@struct"] = { fg = colors.blue },
 		["@enum"] = { fg = colors.blue },
 		["@enumMember"] = { fg = colors.violet },
@@ -198,7 +199,7 @@ M.setup = function()
 		["@decorator"] = { fg = colors.blue },
 
 		-- LSP Semantic (0.9+)
-		["@lsp.type.class"] = { fg = colors.blue },
+		["@lsp.type.class"] = { link = "Class" },
 		["@lsp.type.enum"] = { fg = colors.blue },
 		["@lsp.type.decorator"] = { link = "Number" },
 		["@lsp.type.enumMember"] = { fg = colors.violet },
