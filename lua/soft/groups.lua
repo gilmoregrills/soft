@@ -20,7 +20,7 @@ M.setup = function()
 		Keywords = { link = "Keyword" },
 		Variable = { fg = colors.purpleDefault },
 		Identifier = { fg = colors.blue },
-		Function = { fg = palette.greenFaded },
+		Function = { fg = colors.greenFaded },
 		Statement = { link = "Keyword" },
 		Conditional = { fg = colors.blue },
 		Repeat = { fg = colors.blue },
