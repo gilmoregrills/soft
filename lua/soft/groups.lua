@@ -172,6 +172,7 @@ M.setup = function()
 
 		["@variable"] = { link = "Variable" },
 		["@variable.builtin"] = { link = "Variable" },
+		["@variable.member"] = { link = "Variable" },
 
 		["@text"] = { link = "Normal" },
 		["@text.strong"] = { fg = colors.purpleDefault, bold = true }, -- bold
