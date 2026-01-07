@@ -92,7 +92,7 @@ M.setup = function()
 		SpellRare = { fg = colors.yellow },
 
 		Terminal = { link = "Normal" },
-		Visual = { bg = colors.background },
+		Visual = { bg = colors.purpleLight },
 		VisualNOS = { fg = colors.salmon },
 		WarningMsg = { fg = colors.yellow },
 		WildMenu = { link = "Normal" },
