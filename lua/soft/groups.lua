@@ -4,7 +4,7 @@ local colors = require("soft.palette")
 
 M.setup = function()
 	return {
-		Normal = { link = "Normal" },
+		Normal = { fg = colors.purpleDefault, bg = colors.background },
 		NormalNC = { link = "Normal" },
 		NormalFloat = { link = "Normal" },
 		Comment = { fg = colors.textFaded, italic = true },
@@ -76,7 +76,7 @@ M.setup = function()
 		IncSearch = { fg = colors.redDarker, bg = colors.salmon },
 		LineNr = { fg = colors.textFaded },
 		MatchParen = { underline = true },
-		NonText = { fg = colors.nontext, bg = colors.background },
+		NonText = { fg = colors.textFaded, bg = colors.background },
 		Pmenu = { fg = colors.purpleDarkest, bg = colors.purpleLight },
 		PmenuSel = { fg = colors.purpleDarkest, blend = 0, bg = colors.purpleDefault },
 		PmenuSbar = { fg = colors.debug1, bg = colors.debug2 },
@@ -138,7 +138,7 @@ M.setup = function()
 		["@string.escape"] = { fg = colors.textEmphasis },
 		["@character"] = { link = "Number" },
 		["@number"] = { link = "Number" },
-		["@boolean"] = { fg = colors.yellow },
+		["@boolean"] = { link = "Boolean" },
 		["@float"] = { link = "Number" },
 		["@annotation"] = { fg = colors.yellow },
 		["@attribute"] = { fg = colors.blue },
@@ -213,7 +213,7 @@ M.setup = function()
 		["@lsp.type.property"] = { link = "@property" },
 		["@lsp.type.struct"] = { fg = colors.blue },
 		["@lsp.type.type"] = { link = "Type" },
-		["@lsp.type.variable"] = { link = "Type" },
+		["@lsp.type.variable"] = { link = "Variable" },
 		["@lsp.type.keyword"] = { link = "Keyword" },
 
 		-- HTML
@@ -260,7 +260,7 @@ M.setup = function()
 		markdownRule = { fg = colors.textFaded },
 
 		--  Diff
-		diffAdded = { fg = colors.orange },
+		diffAdded = { fg = colors.green },
 		diffRemoved = { fg = colors.red },
 		diffFileId = { fg = colors.yellow, bold = true, reverse = true },
 		diffFile = { link = "NonText" },
@@ -296,10 +296,10 @@ M.setup = function()
 		NvimTreeIn = { bg = colors.purpleLight },
 
 		-- LSP
-		DiagnosticError = { fg = colors.textDark, bg = colors.red },
-		DiagnosticWarn = { fg = colors.textDark, bg = colors.yellow },
-		DiagnosticInfo = { fg = colors.textDark, bg = colors.blue },
-		DiagnosticHint = { fg = colors.textDark, bg = colors.blue },
+		DiagnosticError = { fg = colors.red },
+		DiagnosticWarn = { fg = colors.yellow },
+		DiagnosticInfo = { fg = colors.blue },
+		DiagnosticHint = { fg = colors.blue },
 		DiagnosticUnderlineError = { undercurl = true, sp = colors.red },
 		DiagnosticUnderlineWarn = { undercurl = true, sp = colors.yellow },
 		DiagnosticUnderlineInfo = { undercurl = true, sp = colors.blue },
@@ -331,8 +331,8 @@ M.setup = function()
 		LspCodeLens = { fg = colors.blue },
 
 		-- Cmp
-		CmpItemAbbr = { fg = colors.white, bg = colors.background },
-		CmpItemKind = { fg = colors.white, bg = colors.background },
+		CmpItemAbbr = { link = "Normal" },
+		CmpItemKind = { link = "Normal" },
 		CmpItemKindMethod = { link = "@method" },
 		CmpItemKindText = { link = "@text" },
 		CmpItemKindFunction = { link = "@function" },

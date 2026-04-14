@@ -73,7 +73,7 @@ M.load = function()
 		vim.cmd("syntax reset")
 	end
 
-	vim.o.background = "dark"
+	vim.o.background = "light"
 	vim.o.termguicolors = true
 	vim.g.colors_name = "soft"
 
