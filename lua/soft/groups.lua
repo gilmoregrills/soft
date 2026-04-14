@@ -363,6 +363,13 @@ M.setup = function()
 		CmpItemKindStruct = { link = "@structure" },
 		CmpItemKindTypeParameter = { link = "@parameter" },
 
+		-- Blink CMP
+		BlinkCmpMenu = { link = "Normal" },
+		BlinkCmpMenuBorder = { link = "Normal" },
+		BlinkCmpMenuSelection = { link = "Visual" },
+		BlinkCmpScrollBarThumb = { link = "Normal" },
+		BlinkCmpScrollBarGutter = { link = "Normal" },
+
 		-- WinPicker
 		-- WinPicker = { fg = colors.background, bg = colors.number },
 	}
