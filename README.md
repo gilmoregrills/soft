@@ -17,6 +17,6 @@ Also uses italics for some highlight groups, so there's that :)
 ### vim.pack:
 ```lua
 vim.pack.add({
-	{ src = "https://github.com/gilmoregrills/soft-era-nvim", version = "main", name = "soft" },
+	{ src = "https://github.com/gilmoregrills/soft", version = "main", name = "soft" },
 })
 ```
