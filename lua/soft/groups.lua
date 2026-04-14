@@ -367,7 +367,7 @@ M.setup = function()
 		BlinkCmpMenu = { link = "Normal" },
 		BlinkCmpMenuBorder = { link = "Normal" },
 		BlinkCmpMenuSelection = { link = "Visual" },
-		BlinkCmpScrollBarThumb = { link = "Normal" },
+		BlinkCmpScrollBarThumb = { fg = colors.purpleDarker, bg = colors.background },
 		BlinkCmpScrollBarGutter = { link = "Normal" },
 
 		-- WinPicker
